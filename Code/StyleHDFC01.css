@@ -1,0 +1,34 @@
+body{
+    text-align:left;
+/*    font:12px Arial,Helvetica,sans-serif;*/
+    font-family: "fontello";
+    font-size:20px;
+    background:#f5f5f5
+}
+#heading {padding-bottom: 10PX;background: #ffffff ;width: 100%}
+.hdfclogoblk {margin: auto;width: 15%;padding: 10px}
+.hdfcwelcometxt {margin: auto;width: 23%;padding: 10px}
+
+#container {
+    margin-left: 270px;
+    margin-top: 10px;
+    width: 62%;
+    background: #ffffff;
+    hight :auto;
+/*    font-family: "fontello";*/
+}
+/*
+.login {margin: auto;margin-left: 10px;width: 45%;padding-left:10PX}
+#LogintoNetBanking {text-align:left ;font-family: Times, sans-serif}
+#UserIDla {font-size: 19}*/
+
+
+
+.moreinfo {
+    margin-left: 530px;
+    width: 30%;
+    border: 3px solid green
+}
+
+
+
