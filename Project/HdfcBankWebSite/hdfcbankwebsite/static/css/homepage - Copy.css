@@ -1,0 +1,323 @@
+p{ margin:0 }
+body{padding: 0px}
+
+
+
+/*_____________________________________________________________________________________________________________*/
+
+
+
+.topopt{ margin: 0px;color:#3B6AA0; font-size: 12px}
+
+/*_____________________________________________________________________________________________________________*/
+
+
+#mainbar{
+width: 64.5%;
+background:#90c4f5;
+/*border: 3px solid green;*/
+}
+
+.hdfcnettbanking{height: 90px}
+
+#accountdetails{
+position: absolute;
+top: 40px;
+left: 225px;
+/*border: 3px solid green;*/
+}
+
+.Welcome{font-size: 12px; font-weight: bold}
+
+.lastlog{font-size: 12px;}
+
+.accountdetails{position: absolute;top: 40px;left: 220px}
+
+.profiledetails{position: absolute;top: 50px;left: 730px;font-size: 12px;}
+
+#buttons{
+margin: 0px;
+padding: 0px;
+position: absolute;
+top: 83px;
+left: 230px;
+/*border: 3px solid green;*/
+}
+
+.profiledetails{position: absolute;top: 50px ; left: 720px}
+
+.logoutbutton{position: absolute;top: 45px;left: 910px;border-radius:4px;background-color:#004a8f ;color: #FFFFFF; }
+
+.accountsbutton{background-color:#004a8f ;color: #FFFFFF;height: 40px;width: 75px;
+border-top-left-radius: 5px;border-top-right-radius: 5px;outline: none;}
+
+.fundbutton{;height: 40px;width: 93px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.billpaybutton{;height: 40px;width: 60px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.cardsbutton{;height: 40px;width: 80px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.dematbutton{;height: 40px;width: 70px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.mutualbutton{;height: 40px;width: 100px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.insurancebutton{;height: 40px;width: 80px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.loansbutton{;height: 40px;width: 80px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.offersbutton{;height: 40px;width: 80px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+/*_____________________________________________________________________________________________________________*/
+
+
+#sidebar{
+width: 13.5%;
+position: absolute;
+top: 124px;
+/*background:#66c4f5;*/
+/*border: 3px solid green;*/
+}
+
+#accounts{
+height: 25px;
+background: #004a8f;
+color: #FFFFFF;
+font-size: 19px;
+padding-top: 4px;
+padding-left: 12px;
+}
+
+#accountSummary{
+height: 42px;
+font-size: 17px;
+padding-top: 12px;
+padding-left: 12px;
+/*background:#66c4f5;*/
+}
+
+#transact{
+height: 42px;
+font-size: 17px;
+padding-top: 12px;
+padding-left: 12px;
+background:#e2effa;
+}
+
+#enquire{
+height: 42px;
+font-size: 17px;
+padding-top: 12px;
+padding-left: 12px;
+background:#e2effa;
+}
+
+#request{
+height: 42px;
+font-size: 17px;
+padding-top: 12px;
+padding-left: 12px;
+background:#e2effa;
+}
+
+
+.horizontallin{margin: 0px}
+
+/*_____________________________________________________________________________________________________________*/
+
+#mainblock{
+position: absolute;
+top: 124px;
+left: 213px;
+width: 756px;
+height:628px;
+/*padding-left: 20px;*/
+background-color: #e5eecc;
+}
+
+.account-summary{
+    top: 10%;
+    height: 40px;
+    width: 50%;
+    background-color: blue;
+    float: left;
+}
+
+#print-this-page{
+    position: relative;
+    height: 40px;
+    width: 50%;
+    float: right;
+    background-color: black;
+}
+
+#account-balance{
+    position: relative;
+    background-color: yellow;
+    height: 40%;
+    top: 120px;
+}
+
+#text-saving-account{
+    position: relative;
+    float: left;
+    height: 40px;
+    background-color: green;
+    width: 50%;
+}
+
+#text-account-value{
+    position: relative;
+    float: right;
+    height: 40px;
+    background-color: red;
+    width: 50%;
+}
+
+/*
+#balance-history{
+    position: relative;
+    height: 40px;
+    background-color: orange;
+    /*display: none;*/
+}*/
+
+
+
+.transaction{
+position: absolute;
+top: 100px;
+color: #0000ee;
+}
+
+
+
+.p1{
+position: absolute;
+top: 8px;
+text-align: left}
+
+.p2{text-align:right;}
+
+/*__________________________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________________*/
+
+#container{
+    position: absolute;
+    width: 1000px;
+    background-color: pink;
+}
+
+#topbar{
+    position: relative;
+    top: 0px;
+    height: 30px;
+    background: #CAE1FF;
+    text-align: right;
+}
+
+#topbar-text{
+    position: relative;
+    float: right;
+    height:50%;
+    width: 50%;
+    background-color: grey;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#topbar-text span{
+    position: absolute;
+    display: block;
+    padding-bottom: 0px;
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainbar{
+    position: relative; 
+    height: 90px;
+    background:#90c4f5;
+}
+
+#main-container{
+    position: relative;
+    background-color: grey;
+/*    height: ;*/
+}
+
+#sidebar{
+    position: relative;
+    float: left;
+    width: 220px;
+    height: 500px; /*think-about-it*/
+    background-color: red;
+}
+
+#mainblock{
+    position: relative;
+    float: right;
+    width: 780px;
+    height: 500px;
+    background-color: lightblue;
+}
+
+#mainblock-section-1{
+    position: relative;
+    background-color: orange;
+    height: 40px;
+}
+
+#account-summary{
+    position: relative;
+    height: 40px;
+    width: 50%;
+    float: left;
+    background-color: blue;
+}
+
+#print-this-page{
+    position: relative;
+    height: 40px;
+    width: 50%;
+    float: right;
+    background-color: black;
+}
+
+#account-balance{
+    position: relative;
+    background-color: yellow;
+    height: 50%;
+    top: 120px;
+}
+
+#text-saving-account{
+    position: relative;
+    float: left;
+    height: 40px;
+    background-color: green;
+    width: 50%;
+}
+
+#text-account-value{
+    position: relative;
+    float: right;
+    height: 40px;
+    background-color: red;
+    width: 50%;
+}
+
+
+#balance-history{
+    position: relative;
+    top: 40px;
+    height: 40px;
+    background-color: orange;
+    display: none;
+}
+

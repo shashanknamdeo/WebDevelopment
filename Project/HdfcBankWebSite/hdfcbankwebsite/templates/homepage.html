@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome To HDFC Bank Netbanking</title>
+	{% load static %}
+	<link href="{% static 'css/homepage.css' %}" rel="stylesheet">
+	<!-- <script type="text/javascript" src="{% static '/js/jquery.js' %}"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{% static '/js/homescript.js' %}"></script>
+
+</head>
+<body>
+	<div id="container">
+		<div id="topbar">
+			<p class="topopt">SmartBuy &nbsp;&nbsp;&nbsp; personalze User ID &nbsp;&nbsp;&nbsp; Insta Alerts &nbsp;&nbsp;&nbsp;
+			SMS Banking Registration &nbsp;&nbsp;&nbsp; Contact Us &nbsp;&nbsp;&nbsp;</p>
+		</div>
+		<div id="mainbar">
+			<img class="hdfcnettbanking" src="{% static 'images/HDFCNetbanking.png' %}">
+			<div id="accountdetails">
+				<p class="Welcome">WELCOME, SHASHANK NAMDEO</p>
+				<p class="lastlog">Last Log in: Dec 02 2022 11:29 P.M. IST</p>
+			</div>
+			<p class="profiledetails">Change Passward &nbsp;&nbsp;&nbsp; Profile Details</p>
+			<button class="logoutbutton">Logout</button>
+			<div id="buttons">
+			<button class="accountsbutton">Accounts</button>
+			<button class="fundbutton">Fund Tranfer</button>
+			<button class="billpaybutton">BillPay</button>
+			<button class="cardsbutton">Cards</button>
+			<button class="dematbutton">Demat</button>
+			<button class="mutualbutton">Mutual Fund</button>
+			<button class="insurancebutton">Insurance</button>
+			<button class="loansbutton">Loan</button>
+			<button class="offersbutton">Offer</button>
+			</div>
+		</div>
+		<div id="sidebar">
+			<div id="accounts">Accounts</div>
+			<div id="accountSummary">Account Summary</div>
+			<hr class="horizontallin" >
+			<div id="transact">Transact &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9658;</div>
+			<hr class="horizontallin" >
+			<div id="enquire">Enquire &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9658; </div>
+			<hr class="horizontallin" >
+			<div id="request">Request &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9658;</div>
+			<hr class="horizontallin" >
+		</div>
+		<div id="mainblock">
+			<p class="account-summary">Account Summary</p>
+			<img class="print-this-page" src="{% static 'images/PrintThisPage.png' %}">
+			<div id="account-balance">
+				<p class="text-saving-account">Savings Account</p>
+				<p class="text-account-value">Total Available Balance: INR 21,077.00 &nbsp;&nbsp;&nbsp;&nbsp; &#9658; </p>
+			</div>
+			<div id="balance-history">
+				<table class ="transactions-table">
+					<col width="80" >
+					<col width="" >
+					<col width="" >
+					<col width="90" >
+					<col width="84" >
+					<col width="80" >
+					<col width="" >
+					<tr>
+						<th>Date</th>
+						<th>Narration</th>
+						<th>Cheque/Ref. No.</th>
+						<th>Value Date</th>
+						<th>Withdrawal</th>
+						<th>Deposit</th>
+						<th>Closing Balance</th>
+					</tr>
+					{% for result in data %}
+					<tr>
+						<td>{{result.date}}</td>
+						<td>{{result.narration}}</td>
+						<td>{{result.cheque_no}}</td>
+						<td>{{result.value_date}}</td>
+						<td>{{result.withdrawal}}</td>
+						<td>{{result.deposit}}</td>
+						<td>{{result.closing_balance}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
+			<div id="note">
+				<p class="note-heading">Note:</p>
+				<br>
+				<li class="note-text-1">The Available Balance displayed includes the credit balance and overdraft limit (if any) in your account.</li>
+				<p class="note-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(i) It does not include Uncleared Funds.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ii) It includes amount marked for hold.</p>
+				<li class="note-text">The Hold Balance may also include pending service charges due to be recovered from your account.</li>
+				<li class="note-text">Savings account customers can now receive their statements monthly, by email, for free. To register - Click here!!</li>
+				<li class="note-text">What's New ! Now recharge your Prepaid Mobile and DTH connections through BillPay & Recharge! Click here to know more</li>
+				<li class="note-text">Please <u>click here</u> to check your PAN Card details.</li>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+<!-- python manage.py runserver 0.0.0.0:8000 -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>Date</th>
+			<th>Narration</th>
+			<th>Cheque/Ref. No.</th>
+			<th>Value Date</th>
+			<th>Withdrawal</th>
+			<th>Deposit</th>
+			<th>Closing Balance</th>
+		</tr>
+		{% for result in data %}
+		<tr>
+			<td>{{result.date}}</td>
+			<td>{{result.narration}}</td>
+			<td>{{result.cheque_no}}</td>
+			<td>{{result.value_date}}</td>
+			<td>{{result.withdrawal}}</td>
+			<td>{{result.deposit}}</td>
+			<td>{{result.closing_balance}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html> -->

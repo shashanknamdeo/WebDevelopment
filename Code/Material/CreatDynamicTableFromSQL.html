@@ -1,0 +1,44 @@
+
+<!-- https://www.youtube.com/watch?v=bHFoobciCTM -->
+
+<table>
+<tr>
+<th>Id</th>
+<th>Username</th>
+<th>Password</th>
+</tr>
+<?php
+$conn = mysqli_connect("localhost", "root", "", "company");
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT id, username, password FROM login";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>"
+. $row["password"]. "</td></tr>";
+}
+echo "</table>";
+} else { echo "0 results"; }
+$conn->close();
+?>
+</table>
+
+
+CREATE TABLE transactions (
+    Transaction_ID int,
+    Date varchar(20),
+    Narration varchar(255),
+    Cheque_no varchar(20),
+    Value_Date varchar(20),
+    Withdrawal varchar(20),
+    Deposit varchar(20),
+    Closing_Balance varchar(20)
+);
+
+
+INSERT INTO transactions (Transaction_ID ,Date,Narration ,Cheque_no,Value_Date,Withdrawal,Closing_Balance)
+VALUES (124,'13 Dec 2022', 'NWD-526099XXXXXX9038-14132063-BHOPAL', '234711013535', '13 Dec 2022', '1,000.00', '21,077.00');

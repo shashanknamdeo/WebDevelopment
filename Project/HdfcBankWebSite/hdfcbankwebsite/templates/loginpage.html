@@ -1,0 +1,77 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load static %}
+	<link href="{% static 'css/loginpage.css' %}" rel="stylesheet">
+	<title>Welcome to HDFC Bank NetBanking</title>
+</head>
+<body>
+	<div id="heading">
+		<div id ="hdfclogoblk"> <img src="{% static 'images/HDFClogo.png' %}" alt=""> </div>
+		<div id ="hdfcwelcometxt" id="hdfcwelcmetxtId"> Welcome to HDFC Bank NetBanking </div>
+	</div>
+	<div id="container" >
+		<div id="login" >
+			<p class ="logintoNetBanking">Login to NetBanking</p>
+			<div id="logintxt">
+				<p class="customerid" >Customer ID/ User ID</p>
+				<p class="password">Password/ IPIN</p>
+			</div>
+			<div id="loginOpetion">
+				<form action = "/login/" method = "POST">
+					{% csrf_token %}
+					{{form.as_p}}
+					<input type="text" class ="userid" name="UserID" >
+					<br>
+					<br>
+					<input type="text" class ="password" name="Password" >
+					<p class="forgotpwd">Forgot Password / IPIN</p>
+					<p>IPIN (Password) is case sensitive</p>
+					<input type="checkbox" class="keyboard" name="keyboard" value="keyboard">
+					<label for="keyboard">Use virtual keyboard for password</label>
+					<br>
+					<br>
+					<input type="submit" value="login" class="submit">
+				</form>
+			</div>
+			<div id="moreinfo">
+				<img class ="norton" src="{% static 'images/nortonsecurity.png' %}" alt="">
+				<p>Your security is of utmost importance.</p>
+				<p class="knowmore">Know more..</p>
+			</div>
+			<hr class="horizontallin" >
+			<div id="ads">
+				<p class="createaccount">Don't have a HDFC Bank Savings Account?</p>
+				<p class="loginhere">Cradit Cards only? Login here</p>
+				<p class="loginhere">Prepaid Card only? Login here</p>
+				<p class="loginhere">Online Retail Loan only? Login here</p>
+			</div>
+			<div id="newfeatures">
+				<p class="features">We have added a host of new features!</p>
+				<p class="points">  You can now do so much more:</p>
+				<ul>
+					<li>Anywhere access through Desktop or mobile</li>
+					<li>Enhanced security measures</li>
+				</ul>
+				<p class="demo">View a Demo</p>
+			</div>
+
+	</div>
+
+
+</body>
+</html>
+
+
+<!-- <form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>		

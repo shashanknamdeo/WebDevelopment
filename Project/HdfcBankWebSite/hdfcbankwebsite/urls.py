@@ -1,3 +1,24 @@
+from django.contrib import admin
+from django.urls import include, path
+
+
+from hdfcbankwebsite.views import login
+from hdfcbankwebsite.views import home
+from hdfcbankwebsite.views import showdata
+
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('login/',login),
+    # path('home/',home)
+    path('home/',showdata)
+    
+    # path('hdfcbankwebsite/','view')
+    # path('login/', include('login.urls')),
+
+]
+
 """hdfcbankwebsite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,11 +34,4 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import include, path
 
-
-urlpatterns = [
-    path('login/', include('login.urls')),
-    path('admin/', admin.site.urls),
-]

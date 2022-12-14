@@ -1,0 +1,91 @@
+body{
+    text-align:left;
+    font-family: "fontello";
+    background:#f5f5f5
+}
+
+#heading {padding-bottom: 10PX;
+    background: #ffffff ;
+    width: 100%
+}
+
+#hdfclogoblk {margin: auto;
+    width: 15%;
+    padding: 10px
+}
+
+#hdfcwelcometxt {margin: auto;
+    width: 23%; 
+    padding: 10px; 
+    font-size: 21px
+}
+
+#container {
+    position: absolute;
+    margin-left: 270px;
+    margin-top: 10px;
+    width: 62%;
+    background: #ffffff;
+    height: 550px;
+}
+
+#login {
+    margin: auto;
+    margin-left: 10px;
+    width: 45%;
+    height: 60%;
+    padding-left:10PX;
+/*    border: 3px solid green*/
+}
+
+#logintxt {
+    top: 50px;
+    position: absolute;
+    width: 15%;
+/*    border: 3px solid green*/
+}
+
+#loginOpetion {
+    position: absolute;
+    left:180px;
+    top: 62px; 
+/*    border: 3px solid green*/
+}
+.userid {width: 240px;height: 25px}
+
+.password {width: 240px;height: 25px}
+
+.submit {background: #007fff; color: #ffffff;width: 250px; height: 35px;font-size: 20px}
+
+.logintoNetBanking {text-align:left; font-family: Times, sans-serif; font-size: 21px }
+
+.customerid {height: 37px;}
+
+.forgotpwd {color:#007fff}
+
+.horizontallin {position: absolute; left:20px; top: 330px; width:96%;text-align:left}
+/*______________________________________________________________________________________________________________*/
+
+#moreinfo {position: absolute;left: 570px;top: 50px; width: 35%;}
+
+.norton { margin-left: 130px ;}
+
+.knowmore { color:#007fff}
+
+/*______________________________________________________________________________________________________________*/
+
+#ads {position: absolute;left: 20px;top: 350px; width: 45%;}
+
+.createaccount {font-size: 20px}
+
+.loginhere { color:#007fff }
+
+/*______________________________________________________________________________________________________________*/
+
+#newfeatures {position: absolute;left: 570px;top: 350px; width: 45%;}
+
+.features {font-size: 20px}
+
+.points {padding-left: 20px}
+
+.demo {padding-left: 25px; color:#007fff}

@@ -1,0 +1,256 @@
+p{ margin:0px;
+padding:0px 
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container {
+    margin: 0px;
+    padding: 0px;
+}
+
+#topbar {
+    position: fixed;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 1000px;
+    background-color: #e2effa;
+    color: #1857ab;
+    text-align: right;
+    font-size: 12px;
+}
+
+/*_________________________________________________________________________________________________________________*/
+
+#mainbar{
+    position: fixed;
+    top: 29px;
+    width: 1000px;
+    height: 92px;
+    background:#90c4f5;
+    /*border: 3px solid green;*/
+}
+
+.hdfcnettbanking{height: 90px}
+
+#accountdetails{
+position: fixed;
+top: 40px;
+left: 225px;
+font-size: 11px;
+/*border: 3px solid green;*/
+}
+
+.Welcome{
+    font-weight: bold;
+    color: #024c90 ;
+}
+
+.lastlog{
+    color: #024c90
+}
+
+.profiledetails{
+    position: fixed;
+    width: 170px;
+/*    background-color: red;*/
+}
+
+.profiledetails{position: fixed;
+    top: 50px;
+    left: 730px;
+    font-size: 12px;
+    color: #024c90;
+}
+
+.logoutbutton{position: fixed;top: 45px;left: 912px;border-radius:4px;background-color:#024c90 ;color: #FFFFFF;
+    height: 25px;
+    width: 70px;
+border: none }
+
+#buttons{
+margin: 0px;
+padding: 0px;
+position: fixed;
+top: 80px;
+left: 230px;
+width:750px ;
+/*background: red;*/
+/*border: 3px solid green;*/
+}
+
+.accountsbutton{background-color:#004a8f ;color: #FFFFFF;height: 40px;width: 75px;
+border-top-left-radius: 5px;border-top-right-radius: 5px;outline: none;border: none;}
+
+.fundbutton{;height: 40px;width: 93px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.billpaybutton{;height: 40px;width: 60px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.cardsbutton{;height: 40px;width: 80px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.dematbutton{;height: 40px;width: 70px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.mutualbutton{;height: 40px;width: 100px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.insurancebutton{;height: 40px;width: 80px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.loansbutton{;height: 40px;width: 80px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+.offersbutton{;height: 40px;width: 80px;border-top-left-radius: 5px;border-top-right-radius: 5px;border: none;background: #90c4f5}
+
+/*_________________________________________________________________________________________________________________*/
+
+#sidebar{
+position: fixed;
+top: 120px;
+width: 215px;
+/*background:#66c4f5;*/
+/*border: 3px solid green;*/
+}
+
+#accounts{
+height: 28px;
+background: #004a8f;
+color: #FFFFFF;
+font-size: 19px;
+padding-top: 4px;
+padding-left: 12px;
+}
+
+#accountSummary{
+height: 42px;
+font-size: 17px;
+padding-top: 12px;
+padding-left: 12px;
+/*background:#66c4f5;*/
+}
+
+#transact{
+height: 42px;
+font-size: 17px;
+padding-top: 12px;
+padding-left: 12px;
+background:#e2effa;
+}
+
+#enquire{
+height: 42px;
+font-size: 17px;
+padding-top: 12px;
+padding-left: 12px;
+background:#e2effa;
+}
+
+#request{
+height: 42px;
+font-size: 17px;
+padding-top: 12px;
+padding-left: 12px;
+background:#e2effa;
+}
+
+.horizontallin{margin: 0px}
+
+/*_________________________________________________________________________________________________________________*/
+
+#mainblock{
+position: fixed;
+top: 121px;
+left: 215px;
+width: 765px;
+height:628px;
+padding-left: 20px;
+/*background-color: #e5eecc;*/
+}
+
+.account-summary{
+    position: absolute;
+    top: 15px;
+    height: 40px;
+    width: 50%;
+/*    float: left;*/
+    font-size: 22px;
+}
+
+.print-this-page{
+    position: absolute;
+    top:15px ;
+    left: 640px;
+    height: 40px;
+    width: 140PX;
+    float: right;
+}
+
+#account-balance{
+    position: absolute;
+    top: 220px;
+    height: 18px;
+    width: 750px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: #e2effa;
+}
+
+.text-saving-account{
+    position: absolute;
+    float: left;
+}
+
+.text-account-value{
+    position: absolute;
+    left: 450px;
+}
+
+#balance-history{
+    position: absolute;
+    top: 258px;
+/*    height: 40px;*/
+/*    background-color: orange;*/
+    display: none;
+}
+
+/*.transactions-table {
+    border: 1px solid;
+    border-collapse: collapse;
+}*/
+
+
+table, td, th {
+    font-size: 14px;
+    border: 1px solid;
+/*    width: 740px;*/
+    text-align: center;
+}
+
+th {
+    background-color: #dfe5ed;
+}
+
+.transactions-table {
+    margin-top: 10px;
+    width: 760px;
+    border-collapse: collapse;
+}
+
+#note {
+    position: relative;
+    top: 350px;
+}
+
+.note-heading{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.note-text-1{
+    font-size: 14px;
+}
+
+.note-text{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
