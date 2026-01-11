@@ -1,0 +1,55 @@
+Java Script DOM (Document Order Model) - See HTML as a Tree and each element (Tags) as a Nodes
+    DOM tree Structure
+    Accwss element DOM
+    Content Change DOM
+    Style Change DOM
+    Atribute change DOM
+    Create element DOM
+    Add element DOM
+    Removing Elment DOM
+    DOM Events (OnClick, OnMouseOver, OnChange, OnKeyUp, etc)
+
+Events In JavaScript
+    Mouse event
+        onclick
+        ondblclick
+        onmouseover
+        onmouseout
+    KeyBoard Event
+        onkeydoen
+        onkeyup
+        onkeypress
+    Form Event
+        onsubmit
+        onchange
+        onfocus
+        onblur
+    Windows event
+        onload
+        onresize
+Event Handeling Methord
+    Using HTML
+    Using JS (Traditional)
+    Using JS (Modern) - using addeventlistener()
+
+DMTML (Dynamic HTML)
+    HTML
+    CSS
+    JS
+    DOM
+
+
+XML
+    xml declareation <?xml version=1.0  encoding=UTF-8 ?>
+    XML Tag <Name><Name/>
+    xml element
+    xml attribute <Name id='1'>
+
+DTD (Document Type Defination)  -   Define Structure and Rules
+XSD (XML Schema Defination)     -   Define Structure and Rules and Data type
+
+XSL (Extensible Stylesheet Language) - Use to convert XML to HTML/Text/XML
+    XSLT    (Extensible Stylesheet Language Transformation)
+    XPath   - Select part of language
+    XSL-FO  - Formating printing / PDF
+

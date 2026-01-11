@@ -1,0 +1,65 @@
+
+User
+ ↓
+Web Server (Nginx)
+ ↓
+Application Server (Gunicorn)
+ ↓
+Backend Framework (Django)
+ ↓
+Database
+
+___________________________________________________________________________________________________
+
+Web Server
+
+A web server handles HTTP/HTTPS requests from users.
+
+Main responsibilities
+    Accept requests from browser / mobile app
+    Serve static files (HTML, CSS, JS, images)
+    Forward dynamic requests to an application server
+    SSL, compression, caching
+
+Examples
+    Nginx
+    Apache
+
+___________________________________________________________________________________________________
+
+
+Application Server
+
+An application server runs your backend code.
+
+Main responsibilities
+    Executes Python / Java / Node code
+    Manages multiple worker processes
+    Handles concurrency
+    Talks to backend framework
+
+Examples
+    Python  ->  Gunicorn, uWSGI
+    Java    ->  Tomcat
+    Node.js ->  Built-in server
+
+___________________________________________________________________________________________________
+
+
+Backend Framework
+
+A backend framework helps you write backend logic easily.
+
+Main responsibilities
+    URL routing
+    Authentication & authorization
+    ORM (database access)
+    API creation
+    Validation
+    Security helpers
+
+Examples
+    Django / Django REST Framework
+    Flask
+    Spring Boot
+    Express.js

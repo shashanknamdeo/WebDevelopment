@@ -1,0 +1,48 @@
+<!-- 
+
+XML IMP
+
+XML: Introduction to XML, uses of XML, simple XML, XML key components,
+DTDandSchemas, Using XML with application. Transforming XML using XSL and XSLT
+
+ -->
+
+
+<!-- Syntax of XML -->
+
+<?xml version="1.0" encoding="UTF-8"
+
+
+?>
+
+<!-- 
+
+XSL (Extensible Stylesheet Language) is a family of technologies used to style, transform, and display XML documents.
+
+XSL includes three parts:
+XSLT    - Transform XML
+XPath   - Select parts of XML
+XSL-FO  - Formatting for printing/PDF
+
+XSLT is the most important. 
+
+
+XSLT (Extensible Stylesheet Language Transformations)
+is used to transform XML data into another format, such as:
+
+HTML
+Another XML document
+Plain text
+PDF (via XSL-FO)
+
+It works by applying templates to XML nodes.
+
+
+Purpose of XSLT
+
+To convert XML into user-friendly formats
+To rearrange, filter, or compute values from XML
+To change structure of XML documents
+To generate dynamic HTML pages from XML data
+
+-->
