@@ -1,0 +1,28 @@
+
+Create an app
+-------------
+
+python manage.py startapp users apps/users
+
+Command meaning
+    python manage.py
+        Think of it as  :   “Django, do this task for my project”
+    startapp
+        A Django command
+        Means: create a new Django application (module)
+    users
+        This is the name of the app
+        Django uses this name:
+            In imports
+            In settings
+            In database migrations
+        Example:
+            from apps.users.models import UserProfile
+    apps/users
+        This is the directory where the app will be created
+
+In apps/users/apps.py
+    Change  name = 'users'
+    To      name = 'apps.users'
+
+Instead of cluttering root, we keep all apps inside /apps

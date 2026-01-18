@@ -1,0 +1,47 @@
+
+Split config/settings.py
+
+Into
+    base.py
+    dev.py
+    prod.py
+
+Steps:
+    Create folder settings where settings.py located
+    Create files
+        __init__.py
+            Tell pyhton it is a module
+        base.py
+            All django Base setting
+        dev.py
+            Development setting
+        prod.py
+            Production Setting
+    Write
+        base.py
+            Copy all setting.py code to base.py  (except DEBUG, ALLOWED_HOSTS, DATABASE)
+        dev.py
+            Write {from .base import *} at top
+            Copy DEBUG, ALLOWED_HOSTS, DATABASE from setting to dev.py
+        prod.py
+            write 
+                from .base import *
+                DEBUG = False
+                ALLOWED_HOSTS = ['your-domain.com']  # later
+                DATABASES = {
+                    'default': {
+                        'ENGINE': 'django.db.backends.postgresql',
+                        'NAME': 'neurolearn_db',
+                        'USER': 'postgres',
+                        'PASSWORD': 'password',
+                        'HOST': 'rds-endpoint',
+                        'PORT': '5432',
+                    }
+                }
+    Change manage.py
+        Replace this    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+        With            os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.dev')
+    Change asgi.py and wsgi.py
+        Replace this    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+        With            os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.prod')
+    Delete settings.py

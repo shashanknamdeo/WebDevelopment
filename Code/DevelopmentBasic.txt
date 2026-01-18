@@ -1,0 +1,151 @@
+
+User
+ ↓
+Web Server (Nginx)
+ ↓
+Application Server (Gunicorn)
+ ↓
+Backend Framework (Django)
+ ↓
+Database
+
+___________________________________________________________________________________________________
+
+Web Server
+
+A web server handles HTTP/HTTPS requests from users.
+
+Main responsibilities
+    Accept requests from browser / mobile app
+    Serve static files (HTML, CSS, JS, images)
+    Forward dynamic requests to an application server
+    SSL, compression, caching
+
+Examples
+    Nginx
+    Apache
+
+___________________________________________________________________________________________________
+
+
+Application Server
+
+An application server runs your backend code.
+
+Main responsibilities
+    Executes Python / Java / Node code
+    Manages multiple worker processes
+    Handles concurrency
+    Talks to backend framework
+
+Examples
+    Python  ->  Gunicorn, uWSGI
+    Java    ->  Tomcat
+    Node.js ->  Built-in server
+
+___________________________________________________________________________________________________
+
+Frontend vs Backend
+-------------------
+
+Frontend (What the user sees)
+--------------------------------
+    Frontend = User Interface (UI)
+    This is everything the user directly interacts with.
+
+Examples:
+    Website pages (buttons, text, forms)
+    Mobile app screens
+    Colors, layout, animations
+    What happens when a user clicks or types
+
+Technologies:
+    Web: HTML, CSS, JavaScript
+    Frameworks/Libraries: React, Angular, Vue
+    Mobile: React Native, Flutter
+
+Key point:
+    Frontend runs on the user’s device (browser or mobile app).
+
+
+Backend (What the user does NOT see)
+---------------------------------------
+    Backend = Business logic + data handling
+    This is everything that works behind the scenes.
+
+Includes:
+    User authentication (login, signup)
+    APIs
+    Business rules (who can do what)
+    Processing data
+    Saving and fetching data
+
+    Technologies:
+    Languages: Python, Java, Node.js, Go
+    Frameworks: Django, Spring Boot, Express
+    APIs: REST, GraphQL
+
+Key point:
+    Backend usually runs on a server, not on the user’s device.
+
+
+Note:
+    | Action                           | Frontend  |  Backend  |
+    | -------------------------------- | --------  |  -------  |
+    | Code for Button hover color      | ✅        | ❌       |
+    | Code for Button click animation  | ✅        | ❌       |
+    | Code for Form validation (basic) | ✅        | ❌       |
+    | Login authentication             | ❌        | ✅       |
+    | Saving data                      | ❌        | ✅       |
+    | AI processing                    | ❌        | ✅       |
+
+___________________________________________________________________________________________________
+
+
+Backend Framework
+    Backend framework = Software which manage Backend
+    A backend framework helps you write backend logic easily.
+
+Main responsibilities
+    URL routing
+    Authentication & authorization
+    ORM (database access)
+    API creation
+    Validation
+    Security helpers
+
+Examples
+    Django / Django REST Framework
+    Flask
+    Spring Boot
+    Express.js
+
+___________________________________________________________________________________________________
+
+
+API (Application Programming Interface)
+    -
+    REST API (Representational State Transfer)
+        Uses HTTP methods: GET, POST, PUT, DELETE
+        Data format: JSON (mostly)
+        Stateless and lightweight
+    -
+    WebSocket API
+        Full-duplex communication (real-time)
+        Server and client both can send data
+    -
+    GraphQL API
+        Developed by Facebook
+        Client requests exact data it needs
+        Single endpoint
+    -
+    gRPC API
+        Developed by Google
+        Uses Protocol Buffers
+        Very fast and efficient
+    -
+    SOAP API (Simple Object Access Protocol)
+    -
+    RPC API (Remote Procedure Call)
+    -
+    Public vs Private vs Partner APIs

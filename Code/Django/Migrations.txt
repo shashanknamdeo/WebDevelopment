@@ -1,0 +1,62 @@
+
+Django Migrations
+-----------------
+    python manage.py migrate
+    Think of Django migrations as a bridge between your Python code (models) and the database.
+    -
+    When you define a model in Django (like User or StudyPlan), it’s just a Python class.
+    The database doesn’t know about it yet.
+    A migration is like a set of instructions that tells the database:
+    “Create a table for this model, with these columns, types, constraints, relationships…”
+    So migrations are automatically generated scripts that update your database schema.
+
+---------------------------------------------------------------------------------------------------
+
+
+python manage.py makemigrations
+-------------------------------
+
+Creates instructions for the database based on your models.
+
+Think of it like: “Django, look at my models.py files and write a plan for how the database should change.”
+
+More clearly:
+    Django checks all apps in INSTALLED_APPS
+    Looks at models.py
+    Compares:
+        Current models
+        Previous database state
+    Then creates migration files (Python files)
+        Example:  apps/users/migrations/0001_initial.py
+
+
+Note:
+    No database is changed yet
+    Only migration files are created
+
+When you use it
+    After creating or changing models
+    Before running migrate
+
+---------------------------------------------------------------------------------------------------
+
+
+python manage.py migrate
+------------------------
+
+Applies instructions made by {python manage.py makemigrations} to the database
+
+Think of it like:   “Now actually create / update the database tables.”
+
+More clearly:
+    Reads migration files
+    Executes SQL on PostgreSQL
+    Creates tables, columns, relations
+    Example:    CREATE TABLE users_userprofile (...);
+
+Note :  This affects the real database.
+
+When you use it
+    After python manage.py makemigrations
+    When setting up a new environment
+    When updating schema

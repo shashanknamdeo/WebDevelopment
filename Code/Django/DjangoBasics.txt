@@ -1,0 +1,99 @@
+
+In Django:
+    Project = whole backend (NeuroLearn)
+    App = one feature (users, onboarding, study plans)
+
+
+manage.py (MOST IMPORTANT FILE)
+    Command runner for your project
+        Starts server
+        Runs migrations
+        Creates apps
+        Accesses settings
+
+
+python manage.py
+    Uses Django’s command system
+    manage.py is the control center of your Django project
+    Think of it as  :   “Django, do this task for my project”
+
+___________________________________________________________________________________________________
+
+
+Create New Project
+
+(WebDevelopmentVirtualEnv) C:\WindowsData\ShashankPC\WebDevelopment\DjangoProjects>django-admin startproject ProjectName
+
+Run Project
+
+(WebDevelopmentVirtualEnv) C:\WindowsData\ShashankPC\WebDevelopment\DjangoProjects\ProjectName>python manage.py runserver
+
+
+___________________________________________________________________________________________________
+
+
+config/ Folder
+--------------
+    This is your project brain.
+
+config/__init__.py
+    Marks folder as a Python module
+    No logic here
+
+config/settings.py
+    This controls how Django behaves
+    Contains
+        Installed apps
+        Database config
+        Middleware
+        Security settings
+
+config/urls.py
+    Maps URLs → views (APIs)
+    Example     :    path('api/users/', ...)
+    Think of it as      :   API traffic controller 🚦
+
+config/wsgi.py
+    WSGI    :   Interface between Django & web server (Gunicorn, EB)
+    Used in
+        AWS Elastic Beanstalk
+        Production servers
+    ⚠️ Do not modify unless you know why
+
+config/asgi.py
+    ASGI    :   Async interface
+    Used for:
+        WebSockets
+        Async tasks
+
+
+___________________________________________________________________________________________________
+
+
+Super User / Admin User
+-----------------------
+
+Create Super User
+    python manage.py createsuperuser
+
+Access Super User
+    /admin 
+
+Purpose of Admin User
+    Django comes with a built-in admin dashboard (/admin)
+    It allows you to manage your database tables via a web interface
+    You can:
+        Add / edit / delete users
+        Check study plans, sessions, feedback
+        Test tables and relationships
+        Basically, it’s like a control panel for your backend
+Not for app users
+    Normal Website / App users will not use this account
+    This is only for you / developers / system admins
+Benefits
+    Quick way to inspect database entries without writing code
+    Test that migrations and models are working
+    Debug data-related issues early
+
+___________________________________________________________________________________________________
+
