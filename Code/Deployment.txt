@@ -1,0 +1,156 @@
+
+Split django settings
+    base.py
+    dev.py
+    prod.py
+
+-------------------------------------------------
+
+base.py changes
+
+change 
+    SECRET_KEY = 'django-secret-key'
+to
+    import os
+    SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-insecure-secret")
+
+add
+    STATIC_URL = "static/"
+    STATIC_ROOT = BASE_DIR / "staticfiles"
+
+-------------------------------------------------
+
+dev.py changes
+
+change
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "hireiq",           # Your DB name
+            "USER": "hireiq_user",      # Your DB user
+            "PASSWORD": "hireiq123",    # Your DB password
+            "HOST": "localhost",
+            "PORT": "5432",
+            # 
+            "OPTIONS": {
+                "connect_timeout": 5,   # seconds
+            }
+        }
+    }
+to
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": os.environ.get("DB_NAME", "hireiq"),
+            "USER": os.environ.get("DB_USER", "hireiq_user"),
+            "PASSWORD": os.environ.get("DB_PASSWORD", "hireiq123"),
+            "HOST": os.environ.get("DB_HOST", "localhost"),
+            "PORT": "5432",
+            # 
+            "OPTIONS": {
+                "connect_timeout": 5,
+            }
+        }
+    }
+
+add
+    import os
+
+-------------------------------------------------
+
+prod.py changes
+
+paste
+    from .base import *
+    import os
+    # 
+    DEBUG = False
+    # 
+    ALLOWED_HOSTS = [
+        ".elasticbeanstalk.com",
+    ]
+    # 
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": os.environ["DB_NAME"],
+            "USER": os.environ["DB_USER"],
+            "PASSWORD": os.environ["DB_PASSWORD"],
+            "HOST": os.environ["DB_HOST"],
+            "PORT": "5432",
+            "OPTIONS": {
+                "connect_timeout": 5,
+            }
+        }
+    }
+
+-------------------------------------------------
+
+Run : python manage.py check --deploy
+
+if issue in output, resolves issue
+
+-------------------------------------------------
+
+Generate requirements.txt (with command) at Backend root folder
+
+-------------------------------------------------
+
+Create Procfile.txt at Backend root folder
+
+Copy in Procfile.txt
+    web: gunicorn core.wsgi:application --bind 0.0.0.0:8000
+
+Run:
+    gunicorn core.wsgi:application
+
+Output:
+    ModuleNotFoundError: No module named 'fcntl'
+
+This Output is not bad 
+    fcntl is a Linux/Unix-only module
+    Gunicorn depends on it
+    Windows does NOT support fcntl
+
+-------------------------------------------------
+
+Create Backend/.elasticbeanstalk/config.yml.elasticbeanstalk/config.yml
+
+Paste this:
+    branch-defaults:
+      main:
+        environment: hireiq-prod
+    global:
+      application_name: HireIQ
+      default_platform: Python 3.11
+      default_region: ap-south-1
+      sc: git
+
+-------------------------------------------------
+
+Install EB CLI
+    pip install awsebcli
+
+Verify:
+    eb --version
+
+Initialize Elastic Beanstalk (From Backend/):
+    eb init
+
+-------------------------------------------------
+
+SSH Commands
+
+change directory to project-backend-root
+    cd /var/app/current/
+
+to activate python virtual environment
+    source /var/app/venv/*/bin/activate
+
+to forcely get environment veriables
+
+(staging-LQM1lest) [ec2-user@ip-172-31-8-19 current]$ sudo cat /opt/elasticbeanstalk/deployment/env \
+| sed -E 's/^([^=]+)=(.*)$/export \1="\2"/' \
+> /tmp/eb_env.sh
+(staging-LQM1lest) [ec2-user@ip-172-31-8-19 current]$ source /tmp/eb_env.sh
+(staging-LQM1lest) [ec2-user@ip-172-31-8-19 current]$ env | grep DB_
