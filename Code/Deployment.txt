@@ -96,7 +96,7 @@ Generate requirements.txt (with command) at Backend root folder
 
 -------------------------------------------------
 
-Create Procfile.txt at Backend root folder
+Create Procfile (not .txt, simple Procfile file) at Backend root folder
 
 Copy in Procfile.txt
     web: gunicorn core.wsgi:application --bind 0.0.0.0:8000
@@ -152,5 +152,7 @@ to forcely get environment veriables
 (staging-LQM1lest) [ec2-user@ip-172-31-8-19 current]$ sudo cat /opt/elasticbeanstalk/deployment/env \
 | sed -E 's/^([^=]+)=(.*)$/export \1="\2"/' \
 > /tmp/eb_env.sh
+
 (staging-LQM1lest) [ec2-user@ip-172-31-8-19 current]$ source /tmp/eb_env.sh
+
 (staging-LQM1lest) [ec2-user@ip-172-31-8-19 current]$ env | grep DB_

@@ -1,0 +1,82 @@
+
+Set environment veriable in Remote environment
+
+    eb setenv veriable_1=key_1 veriable_2=key_2
+    example - eb setenv DJANGO_SETTINGS_MODULE=core.settings.prod DJANGO_SECRET_KEY=your-secret-key DB_NAME=hireiq DB_USER=postgres 
+
+-------------------------------------------------
+
+Deploy local changes to Remote
+    firt commit changes to git (EB looks at what’s committed in your git repo, not just what’s in your local folder.)
+        git add .
+        git commit -m "EB Commit"
+    then
+        eb deploy
+
+-------------------------------------------------
+
+Open remote machine batch-editor (Like cmd on local machine)
+    eb ssh
+
+SSH Commands :
+
+Change directory to project-backend-root
+    cd /var/app/current/
+
+To activate python virtual environment
+    source /var/app/venv/*/bin/activate
+
+-------------------------------------------------
+
+eb ssh DOES NOT LOAD EB ENV VARS BY DEFAULT
+TO FORCELY GET ENVIRONMENT VERIABLES
+
+sudo cat /opt/elasticbeanstalk/deployment/env \
+| sed -E 's/^([^=]+)=(.*)$/export \1="\2"/' \
+> /tmp/eb_env.sh
+
+source /tmp/eb_env.sh
+
+env | grep DB_
+
+-------------------------------------------------
+
+To download all remote logs
+
+eb logs --all
+
+-------------------------------------------------
+
+Check EB status
+
+eb status
+
+Output:
+Environment details for: hireiq-prod
+  Application name: HireIQ
+  Region: ap-south-1
+  Deployed Version: app-f1a5-260126_152418568822
+  Environment ID: e-c88gxxkejr
+  Platform: arn:aws:elasticbeanstalk:ap-south-1::platform/Python 3.11 running on 64bit Amazon Linux 2023/4.9.1
+  Tier: WebServer-Standard-1.0
+  CNAME: hireiq-prod.eba-mrwhgqww.ap-south-1.elasticbeanstalk.com
+  Updated: 2026-01-26 10:10:12.960000+00:00
+  Status: Ready
+  Health: Green
+
+If health check is red (Possible reason)
+
+1. EB not get Procfile file
+    Create Procfile file 
+    paste required code
+    add and commit changes to git
+    run - eb deploy
+
+2. EB security groups path is '/' which should be '/health/'
+    Cheack security groups health path
+        Open AWS console -> Elastic beanstalk -> Environment -> Your-Environment
+        Open configrations -> Instance traffic and scaling -> edit -> Processes
+        In process, see health check path
+            Wrong   - if it is '/'
+            Correct - if it is '/health/'
+
