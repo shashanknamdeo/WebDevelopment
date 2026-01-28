@@ -79,4 +79,3 @@ If health check is red (Possible reason)
         In process, see health check path
             Wrong   - if it is '/'
             Correct - if it is '/health/'
-
